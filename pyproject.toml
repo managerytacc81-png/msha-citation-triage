@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "msha-citation-triage"
+version = "1.0.0"
+description = "Automated MSHA Citation Contest-Clock & Pattern-of-Violations (POV) Compliance Engine"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Robert Ketler", email = "rketler@gmail.com" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+
+[project.scripts]
+msha-triage = "msha_triage.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+pythonpath = ["."]

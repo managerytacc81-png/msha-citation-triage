@@ -1,0 +1,28 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Large MSHA Bulk Data (Never commit 1.4GB raw datasets)
+*.zip
+Violations.txt
+Mines.txt
+data/*.zip
+data/*.txt
+!tests/fixtures/*.txt
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# System
+.DS_Store
+*.download
